@@ -75,12 +75,18 @@ def main():
 
     for i, path in enumerate(files):
         img = cv2.imread(str(path))
-        faces = app.get(img) if img is not None else []
-        if not faces:
+        if img is None:
             skipped += 1
             continue
-        f = max(faces, key=lambda x: (x.bbox[2] - x.bbox[0]) * (x.bbox[3] - x.bbox[1]))
-        aligned = face_align.norm_crop(img, landmark=f.kps, image_size=112)  # BGR
+        if img.shape[:2] == (112, 112):
+            aligned = img  # ya alineada (p. ej. tomada con capture_faces.py)
+        else:
+            faces = app.get(img)
+            if not faces:
+                skipped += 1
+                continue
+            f = max(faces, key=lambda x: (x.bbox[2] - x.bbox[0]) * (x.bbox[3] - x.bbox[1]))
+            aligned = face_align.norm_crop(img, landmark=f.kps, image_size=112)  # BGR
         label = path.parent.name
         (crops_dir / label).mkdir(exist_ok=True)
         cv2.imwrite(str(crops_dir / label / f"{path.stem}.png"), aligned)
