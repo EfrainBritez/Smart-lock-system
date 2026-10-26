@@ -1,0 +1,32 @@
+# --- Datos biométricos (¡nunca subir!) ---
+faces_db.json
+dataset/
+dataset_test/
+
+# --- Modelos con licencia no comercial (InsightFace) y derivados ---
+models/
+*.onnx
+*.tflite
+
+# --- Archivos generados por el pipeline C1 ---
+work/
+
+# --- Python ---
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
+
+# --- Arduino / PlatformIO ---
+.pio/
+build/
+*.elf
+*.bin
+*.uf2
+
+# --- Sistema e IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
