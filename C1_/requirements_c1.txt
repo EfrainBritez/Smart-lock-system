@@ -14,3 +14,4 @@ onnxsim
 psutil
 ethos-u-vela==5.2.0
 scikit-learn      # solo para --lfw
+PySerial
