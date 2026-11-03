@@ -3,6 +3,10 @@
 Face recognition for registered people using a **Seeed Wio Terminal** and a
 **Grove Vision AI Module V2** (Himax WiseEye2, Cortex-M55 + Ethos-U55).
 
+## Link to Github
+The full repository and the development of the system is on GitHub
+https://github.com/EfrainBritez/Smart-lock-system
+
 ## Stages
 
 - **Stage A (done):** the Grove module streams frames to the PC, which

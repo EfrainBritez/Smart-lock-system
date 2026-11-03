@@ -61,9 +61,3 @@ Luego puedes usar SenseCraft Web Toolkit como antes.
     python memory_budget.py --keep-pad   # conservando pad_img
 
 Es una estimación hecha leyendo el código del SDK, no una medición en el módulo.
-
-## Qué traerme de vuelta
-
-1. La salida de `arm-none-eabi-size` que imprime `build_fd_fm.sh`.
-2. Si compiló sin errores (si no, el primer error).
-3. Si grabó bien y qué ves en el terminal serial tras el RESET.
